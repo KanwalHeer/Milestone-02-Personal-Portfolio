@@ -23,7 +23,7 @@ export default function Home() {
               I am a Full Stack Developer
             </h2>
             <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-              Hi, I'm Kanwal Heer, a Full Stack Developer from Karachi,
+              Hi, I am Kanwal Heer, a Full Stack Developer from Karachi,
               Pakistan. I have a deep passion for IT and spend most of my time
               immersed in technology. Exploring and solving tech challenges is
               what drives me.
