@@ -20,8 +20,8 @@ const Navbar = () => {
           <Link href="#home">
             <Image
               src="/heeri.png"
-              width={40}  // Adjusted size for better fit
-              height={40} // Adjusted size for better fit
+              width={40}
+              height={40}
               alt="Website Logo"
               className="h-10 w-10 md:h-16 md:w-16 rounded-full cursor-pointer"
             />
@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
 
         {/* Links (Hidden on Mobile) */}
-        <div className={`hidden md:flex items-center space-x-4 md:space-x-6`}>
+        <div className="hidden md:flex items-center space-x-4 md:space-x-6">
           <Link
             href="#about"
             className="text-md text-gray-300 hover:text-white px-4 py-2 transition duration-300 ease-in-out border-b-2 border-transparent hover:border-white"
