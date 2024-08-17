@@ -35,11 +35,7 @@ const Navbar = () => {
       </div>
 
       {/* Links (Hidden on Mobile) */}
-      <div
-        className={`space-x-4 flex items-center ${
-          isOpen ? "flex" : "hidden"
-        } md:flex`}
-      >
+      <div className="hidden md:flex space-x-4 items-center">
         <Link
           href="/about"
           className="text-md text-gray-300 hover:text-white border-b-2 border-transparent hover:border-white px-6 py-2 transition duration-300 ease-in-out"
@@ -64,13 +60,13 @@ const Navbar = () => {
 
       {/* Mobile Menu (Hidden on Larger Screens) */}
       <div
-        className={`fixed inset-0 bg-gray-800 bg-opacity-90 z-50 p-4 flex flex-col space-y-4 ${
-          isOpen ? "block" : "hidden"
-        } md:hidden`}
+        className={`fixed inset-0 bg-gray-800 bg-opacity-90 z-50 p-4 flex flex-col space-y-4 md:hidden transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <button
           onClick={toggleMenu}
-          className="text-white text-3xl self-start mb-4 bg-gray-900 p-2 rounded-full"
+          className="text-white text-3xl self-end mb-4 bg-gray-900 p-2 rounded-full"
         >
           <FaTimes />
         </button>
@@ -101,4 +97,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;
