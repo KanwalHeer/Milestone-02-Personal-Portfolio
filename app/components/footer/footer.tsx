@@ -1,5 +1,6 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import styles from "./Home.module.css"; // Import the CSS module for styles
 
 function Footer() {
   return (
@@ -7,7 +8,11 @@ function Footer() {
       <div className="flex flex-col items-center space-y-4 m-2">
         {/* Follow Me Section */}
         <div className="text-center">
-          <h5 className="font-semibold text-gray-300 text-xl">Follow Me</h5>
+          <h5
+            className={`font-semibold text-gray-300 text-xl ${styles.typewriter}`}
+          >
+            Follow Me
+          </h5>
         </div>
 
         {/* Social Media Icons */}
