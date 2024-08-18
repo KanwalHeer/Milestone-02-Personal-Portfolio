@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from "./Home.module.css"; // Import the CSS module for styles
 export default function HomePage() {
   return (
-    <main className="bg-[#000505] min-h-screen flex flex-col">
+    <main className="bg-[#000505] min-h-screen flex flex-col ">
       <div className="flex flex-1 items-center justify-center px-6">
         <div className="flex flex-col md:flex-row items-center justify-between max-w-7xl w-full">
           {/* Main Information Div */}
@@ -28,7 +28,7 @@ export default function HomePage() {
           </div>
 
           {/* Image Div */}
-          <div className="relative w-full md:w-1/2 flex justify-center">
+          <div className="relative w-full md:w-1/2 flex justify-center ">
             <Image
               src="/heeri.png"
               alt="Kanwal Heer"
@@ -39,9 +39,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <footer className="py-4 text-center text-gray-400">
-        <p>© 2024 Kanwal Heer. All rights reserved.</p>
-      </footer>
+     
     </main>
   )
 }

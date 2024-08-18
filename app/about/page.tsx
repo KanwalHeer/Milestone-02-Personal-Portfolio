@@ -6,39 +6,10 @@ function About() {
     <div>
       <section className="testimonials min-h-screen bg-[#000505] w-full flex flex-col items-center">
         <div className="w-full h-full flex flex-col lg:flex-row bg-[#000505] p-4 lg:p-8 space-y-4 lg:space-y-0 lg:space-x-4">
-          <div className="flex-1 flex flex-col space-y-4 lg:space-y-8">
-            <div className="border bg-[#060d0ef1] rounded-3xl p-4 lg:p-6 flex flex-col lg:flex-row items-start lg:items-center">
-              {/* Image Section */}
-              <div className="flex-shrink-0 w-full lg:w-1/3 mb-4 lg:mb-0 flex items-center justify-center">
-                <Image
-                  src="/heeri.png"
-                  height={100} // Smaller height
-                  width={100} // Smaller width
-                  className="rounded-3xl w-auto h-auto object-cover"
-                  alt="p1"
-                />
-              </div>
-
-              {/* Text Section */}
-              <div className="flex-1 lg:ml-6">
-                <h3 className="text-gray-400 text-xl sm:text-2xl lg:text-3xl mb-4 text-center lg:text-left">
-                  What Makes Me, Me
-                </h3>
-                <p className="text-gray-400 mb-4 text-center lg:text-left">
-                  I cherish the small joys in life, like savoring coffee,
-                  enjoying pastries, and hearing great stories. These simple
-                  pleasures bring me happiness.
-                </p>
-                <p className="text-gray-400 mb-4 text-center lg:text-left">
-                  Outside of coding, I love being outdoors, playing basketball,
-                  and relaxing with a classic Old Fashioned cocktail. These
-                  activities keep me grounded and inspire my creativity.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Section */}
+          <h1 className="text-gray-200 text-center text-3xl font-bold p-2">
+            About Me
+          </h1>
+          {/* first Section */}
           <div className="flex-1 flex flex-col space-y-4 lg:space-y-8 bg-[#060d0ef1]">
             <div className="border border-gray-600 rounded-3xl p-4 lg:p-8">
               <h3 className="text-gray-400 text-2xl sm:text-3xl lg:text-4xl mb-4 text-center lg:text-left">
@@ -64,6 +35,37 @@ function About() {
               </p>
             </div>
 
+            {/* image section div */}
+            <div className="flex-1 flex flex-col space-y-4 lg:space-y-8">
+              <div className="border bg-[#060d0ef1] rounded-3xl p-4 lg:p-6 flex flex-col lg:flex-row items-start lg:items-center">
+                <div className="flex-shrink-0 w-full lg:w-1/3 mb-4 lg:mb-0 flex items-center justify-center">
+                  <Image
+                    src="/heeri.png"
+                    height={100} // Smaller height
+                    width={100} // Smaller width
+                    className="rounded-3xl w-auto h-auto object-cover"
+                    alt="p1"
+                  />
+                </div>
+
+                <div className="flex-1 lg:ml-6">
+  <h3 className="text-gray-400 text-xl sm:text-2xl lg:text-3xl mb-4 text-center lg:text-left">
+    What Makes Me, Me
+  </h3>
+  <p className="text-gray-400 mb-4 text-center lg:text-left">
+    As a passionate developer, I find joy in crafting elegant code and solving complex problems. I thrive on creating seamless user experiences and continuously learning about new technologies.
+  </p>
+  <p className="text-gray-400 mb-4 text-center lg:text-left">
+    Beyond the screen, I cherish the simple pleasures of life, like savoring a good cup of coffee, exploring new pastries, and delving into inspiring stories. When I’m not coding, I enjoy spending quality time with my family, going on outings, and discovering new places together.
+  </p>
+  <p className="text-gray-400 mb-4 text-center lg:text-left">
+    Balancing my professional and personal life keeps me grounded and fuels my creativity. These activities not only provide relaxation but also inspire new ideas for my projects.
+  </p>
+</div>
+
+              </div>
+            </div>
+            {/* third section */}
             <div className="border border-gray-600 p-4 lg:p-6 rounded-2xl">
               <h3 className="text-gray-400 text-2xl sm:text-3xl lg:text-4xl mb-4 text-center lg:text-left">
                 Let’s Create Something Amazing
@@ -84,6 +86,7 @@ function About() {
         </div>
       </section>
 
+      {/* tech stack cards */}
       <div className="p-4 lg:p-8">
         <h1 className="text-gray-300 text-2xl sm:text-3xl lg:text-4xl mb-4 text-center">
           My Tech Stack

@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 bg-[#060d0ef1] text-white shadow-lg relative">
+    <nav className="flex items-center justify-between p-4 bg-[#060d0ef1] text-white shadow-lg sticky top-0 sm:sticky sm:top-0 max-w-full overflow-x-hidden">
       {/* Website Name / Logo */}
       <div className="text-white text-lg font-semibold flex items-center">
         <Link href="/">
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Hidden on Larger Screens) */}
       <div
-        className={`fixed inset-0 bg-gray-800 bg-opacity-90 z-50 p-4 flex flex-col space-y-4 md:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0  items-center bg-gray-800 bg-opacity-90 z-50 p-4 flex flex-col space-y-4 md:hidden transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
