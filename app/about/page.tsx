@@ -18,7 +18,7 @@ function About() {
               </h3>
               <p className="text-gray-400 mb-4">
                 My journey as a Full Stack Developer began nearly two years ago,
-                following a transition from a background in graphic design. Over
+                following a transition from a background in web design. Over
                 this period, I have cultivated a robust skill set in both
                 front-end and back-end development, mastering a range of
                 technologies and tools. My expertise now includes creating

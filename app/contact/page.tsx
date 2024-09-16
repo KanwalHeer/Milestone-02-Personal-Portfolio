@@ -1,127 +1,49 @@
-"use client";
-
-// Import react components
-import {
-  FaCircle,
-  FaHeart,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaFacebook,
-} from "react-icons/fa";
+// Importing FontAwesome icons
+import { FaLinkedin, FaFacebook, FaGithub } from "react-icons/fa";
 import Link from "next/link";
-import { useState } from "react";
-import contactSchiema from "./formScheima/schiema";
-import { contactType, eventTypes } from "../Types/form/data";
 
 function Contact() {
-  // Create hook states
-  const [contactInfo, setContactInfo] = useState<contactType>({
-    name: "",
-    email: "",
-    phone: 0,
-    message: "",
-  });
-  const [contactList, setContactList] = useState<contactType[]>([]);
-  const [errors, setContactErr] = useState<string[]>([]);
-
-  // OnChangeHandler function
-  const onChangeHandler = (event: eventTypes) => {
-    let contactDetails = {
-      ...contactInfo,
-      [event.target.name]: event.target.value,
-    };
-    setContactInfo(contactDetails);
-  };
-
-  // OnClickHandler function
-  const onClickHandler = async (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault(); // Prevent the default form submission action
-
-    // Try-catch for catching errors
-    try {
-      const result = await contactSchiema.validate(contactInfo);
-      if (!result) {
-        return;
-      }
-      const newContactList: contactType[] = [...contactList, contactInfo];
-      setContactList(newContactList);
-      setContactErr([]);
-
-      // Reset the form fields
-      setContactInfo({
-        name: "",
-        email: "",
-        phone: 0,
-        message: "",
-      });
-    } catch (err: any) {
-      setContactErr(err.errors);
-    }
-  };
-
   return (
-    <div className="p-8 bg-[#000505]">
-      <section className="contact-us bg-[#000505] py-14">
-        <div className="container mx-auto flex flex-col lg:flex-row gap-8">
-          <div className="flex-1 p-4">
-            <h6 className="text-4xl mb-6 font-semibold text-white p-4">
-              Contact Me
-            </h6>
+    <div className="px-4 lg:px-8 py-8">
+      <h1 className="text-center text-3xl font-extrabold mb-12">Contact Me</h1>
 
-            <form className="grid grid-cols-1 gap-4">
-              <input
-                onChange={onChangeHandler}
-                value={contactInfo.name}
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter Name"
-                className="input-field p-4  bg-[#060d0ef1] text-white border border-gray-600 rounded-lg"
-              />
-              <input
-                onChange={onChangeHandler}
-                value={contactInfo.email}
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter Email"
-                className="input-field p-4  bg-[#060d0ef1] text-white border border-gray-600 rounded-lg"
-              />
-              <input
-                onChange={onChangeHandler}
-                value={contactInfo.phone}
-                type="number"
-                id="phone"
-                name="phone"
-                placeholder="Enter phone number"
-                className="input-field p-4  bg-[#060d0ef1] text-white border border-gray-600 rounded-lg"
-              />
-              <textarea
-                onChange={onChangeHandler}
-                value={contactInfo.message}
-                rows={6}
-                id="message"
-                name="message"
-                placeholder="Message"
-                className="input-field p-4  bg-[#060d0ef1] text-white border border-gray-400 rounded-lg"
-              />
-              <button
-                onClick={onClickHandler}
-                type="submit"
-                className="hero_btn btn py-2 mt-2 px-4 bg-[#060d0ef1] text-white text-xl font-extrabold hover:bg-[#000505] rounded-full border border-gray-600 inline-block"
-              >
-                Send Message
-              </button>
-            </form>
-            {errors.map((item, index) => (
-              <div key={index} style={{ color: "red" }}>
-                <h1>{item}</h1>
-              </div>
-            ))}
-          </div>
+      <div className="max-w-4xl mx-auto p-6 lg:p-8 rounded-2xl shadow-2xl bg-[#0d1a1cf1]">
+        <h3 className="text-white text-2xl sm:text-3xl lg:text-4xl mb-4 text-center">
+          Let&apos;s Discuss Your Next Project
+        </h3>
+        <p className="text-gray-400 mb-4 text-center">
+       Have a question or interested in collaborating on a project? Whether you want to discuss new technologies, need guidance on your 
+       current work, or just want to connect, I’m here to help. Feel free to reach out and let’s explore how we can work together on exciting
+        new opportunities!
+      </p>
+
+        <div className="mt-6 text-center">
+          <Link href={"mailto:alikanwal382@gmail.com"}>
+            <button className="bg-[#000505] text-white text-center py-2 px-4 rounded-lg hover:bg-[#0d1a1cf1] hover:text-gray-200 transition-colors">
+            Send me an email
+            </button>
+          </Link>
         </div>
-      </section>
+
+        {/* Social Media Icons */}
+        <div className="mt-8 flex justify-center space-x-6">
+          <Link
+            href="https://www.linkedin.com/in/kanwal-heer-b3b7b62b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="text-gray-200 hover:text-[#313738f1] text-3xl transition-colors" />
+          </Link>
+         
+          <Link
+            href="https://github.com/KanwalHeer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="text-gray-200 hover:text-[#313738f1] text-3xl transition-colors" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

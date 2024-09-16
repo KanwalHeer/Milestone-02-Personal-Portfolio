@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import styles from "./Home.module.css"; // Import the CSS module for styles
 
@@ -17,27 +17,17 @@ function Footer() {
 
         {/* Social Media Icons */}
         <div className="flex flex-row items-center justify-center space-x-4">
+         
           <Link
-            href="https://www.facebook.com/"
-            className="bg-white text-gray-600 rounded-full hover:bg-gray-300 hover:text-gray-900 p-2 text-sm flex items-center"
+            href="https://github.com/KanwalHeer"
+            className="bg-white text-gray-600 rounded-full hover:bg-gray-300 hover:text-gray-900 p-2 text-lg flex items-center"
           >
-            <FaFacebook className="text-lg" />
+            <FaGithub className="text-lg" />
           </Link>
+         
           <Link
-            href="https://apps.microsoft.com/detail/9wzdncrfj140?hl=en-us&gl=US"
-            className="bg-white text-gray-600 rounded-full hover:bg-gray-300 hover:text-gray-900 p-2 text-sm flex items-center"
-          >
-            <FaTwitter className="text-lg" />
-          </Link>
-          <Link
-            href="https://www.instagram.com/"
-            className="bg-white text-gray-600 rounded-full hover:bg-gray-300 hover:text-gray-900 p-2 text-sm flex items-center"
-          >
-            <FaInstagram className="text-lg" />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/kanwal-heer/"
-            className="bg-white text-gray-600 rounded-full hover:bg-gray-300 hover:text-gray-900 p-2 text-sm flex items-center"
+            href="https://www.linkedin.com/in/kanwal-heer-b3b7b62b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            className="bg-white text-gray-600 rounded-full hover:bg-gray-300 hover:text-gray-900 p-2 text-lg flex items-center"
           >
             <FaLinkedin className="text-lg" />
           </Link>
@@ -45,7 +35,7 @@ function Footer() {
 
         {/* Footer Info Section */}
         <div className="text-center">
-          <h5 className="font-semibold text-gray-300 text-xl">My Website</h5>
+          <h5 className="font-semibold text-gray-300 text-xl">My Prtfolio</h5>
           <p className="text-sm md:text-lg text-gray-400">© 2024.</p>
         </div>
       </div>
