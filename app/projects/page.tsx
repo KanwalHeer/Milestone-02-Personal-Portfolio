@@ -9,7 +9,45 @@ export default function Projects() {
         Explore some of the projects I have created. Each project showcases different aspects of my skills and interests in software development.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-     
+         
+      <Card
+          heading="Full Stack TodoApp"
+          text="A comprehensive Todo application designed to manage tasks efficiently. Features include task creation, editing, and deletion. Designed with a user-friendly interface and optimized for both mobile and desktop."
+          link="https://next-js-fullstack-todo-app-sigma.vercel.app/"
+           image="/p3.png"
+        />
+        <Card
+          heading="Blog Post"
+          text="An engaging number guessing game that challenges players to guess a randomly generated number within a certain range. Features include score tracking and different difficulty levels to enhance the gaming experience."
+          link="https://milestone-03-blog-post-rq1e.vercel.app/"
+            image="/p2.png"
+        />
+        <Card
+          heading="E-Commerce Website"
+          text="A simple and effective word counter tool that provides real-time word and character count. Ideal for writers and students to keep track of their text length easily while working on documents or essays."
+          link="https://milestone-03-project.vercel.app/"
+            image="/p4.png"
+        />
+
+       <Card
+          heading="Resume Builder"
+          text="A comprehensive Todo application designed to manage tasks efficiently. Features include task creation, editing, and deletion. Designed with a user-friendly interface and optimized for both mobile and desktop."
+          link="https://hackathon-lilac-nu.vercel.app/"
+           image="/p3.png"
+        />
+        <Card
+          heading="User Authentication"
+          text="An engaging number guessing game that challenges players to guess a randomly generated number within a certain range. Features include score tracking and different difficulty levels to enhance the gaming experience."
+          link="https://milestone-04-assignments.vercel.app/"
+            image="/p2.png"
+        />
+        <Card
+          heading="Birthday Card generator"
+          text="A simple and effective word counter tool that provides real-time word and character count. Ideal for writers and students to keep track of their text length easily while working on documents or essays."
+          link="https://task-03-birthday-card.vercel.app/"
+            image="/p4.png"
+        />
+
         <Card
           heading="Todo App"
           text="A comprehensive Todo application designed to manage tasks efficiently. Features include task creation, editing, and deletion. Designed with a user-friendly interface and optimized for both mobile and desktop."
@@ -31,7 +69,7 @@ export default function Projects() {
         <Card
           heading="Weather App"
           text="A weather forecasting application that displays current weather conditions and forecasts for various locations. Utilizes external APIs to fetch weather data and provides an intuitive interface for users."
-          link="https://weather-app-psi-six-56.vercel.app"
+          link="https://task-02-weather-app.vercel.app/"
             image="/p1.png"
         />
         <Card

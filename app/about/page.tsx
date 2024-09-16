@@ -1,11 +1,12 @@
 import Card2 from "../about/card2/card2";
 import Image from "next/image";
+import Link from "next/link";
 
 function About() {
   return (
     <div>
       <section className="testimonials min-h-screen bg-[#000505] w-full flex flex-col items-center">
-        <div className="w-full h-full flex flex-col lg:flex-row bg-[#000505] p-4 lg:p-8 space-y-4 lg:space-y-0 lg:space-x-4">
+        <div className="w-full h-full flex flex-col lg:flex-col bg-[#000505] md:flex-col p-4 lg:p-8 space-y-4 lg:space-y-0 lg:space-x-4">
           <h1 className="text-gray-200 text-center text-3xl font-bold p-2">
             About Me
           </h1>
@@ -41,8 +42,8 @@ function About() {
                 <div className="flex-shrink-0 w-full lg:w-1/3 mb-4 lg:mb-0 flex items-center justify-center">
                   <Image
                     src="/heeri.png"
-                    height={100} // Smaller height
-                    width={100} // Smaller width
+                    height={300} // Smaller height
+                    width={300} // Smaller width
                     className="rounded-3xl w-auto h-auto object-cover"
                     alt="p1"
                   />
@@ -77,9 +78,9 @@ function About() {
                 reality.
               </p>
               <div className="mt-4 text-center lg:text-left">
-                <button className="bg-[#000505] text-white py-2 px-4 rounded-full hover:bg-[#060d0ef1] transition-colors">
+              <Link href={'/contact'}><button className="bg-[#000505] text-white py-2 px-4 rounded-full hover:bg-[#060d0ef1] transition-colors">
                   Get in Touch
-                </button>
+                </button></Link>
               </div>
             </div>
           </div>
@@ -91,7 +92,7 @@ function About() {
         <h1 className="text-gray-300 text-2xl sm:text-3xl lg:text-4xl mb-4 text-center">
           My Tech Stack
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
           <Card2
             heading="HTML"
             text="Hypertext Markup Language"
@@ -123,10 +124,10 @@ function About() {
             icon="nodejs"
           />
           <Card2
-            heading="Python"
+            heading="Nextjs"
             text="A versatile programming language known for its readability."
             link="https://www.python.org/"
-            icon="python"
+            icon="nextjs"
           />
           <Card2
             heading="MongoDB"

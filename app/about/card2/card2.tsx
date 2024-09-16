@@ -7,11 +7,11 @@ import {
   FaCss3Alt,
   FaJsSquare,
   FaNodeJs,
-  FaPython,
   FaDatabase,
   FaServer,
-  FaReact,
+  FaReact, // Keeping this for TypeScript icon as placeholder
 } from "react-icons/fa";
+// You might want to use an actual Next.js icon if available
 
 type IconType =
   | "html"
@@ -19,7 +19,7 @@ type IconType =
   | "js"
   | "typescript"
   | "nodejs"
-  | "python"
+  | "nextjs"
   | "mongodb"
   | "postgresql"
   | "vercel"
@@ -31,13 +31,12 @@ const iconMap: { [key in IconType]: JSX.Element } = {
   js: <FaJsSquare className="text-[#F7DF1E]" />,
   typescript: <FaReact className="text-[#007ACC]" />, // Example, replace with TypeScript icon if available
   nodejs: <FaNodeJs className="text-[#8CC84B]" />,
-  python: <FaPython className="text-[#306998]" />,
+  nextjs: <FaReact className="text-[#fcfafa]" />, // Example placeholder for Next.js
   mongodb: <FaDatabase className="text-[#47A248]" />, // Example for MongoDB
   postgresql: <FaDatabase className="text-[#336791]" />, // Example for PostgreSQL
   vercel: <FaServer className="text-[#000000]" />, // Example for Vercel
   tailwindcss: <FaCss3Alt className="text-[#38BDF8]" />, // Example, replace with Tailwind CSS icon if available
 };
-
 interface Card2Props {
   heading: string;
   text: string;
