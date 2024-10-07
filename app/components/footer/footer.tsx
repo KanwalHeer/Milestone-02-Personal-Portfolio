@@ -35,7 +35,7 @@ function Footer() {
 
         {/* Footer Info Section */}
         <div className="text-center">
-          <h5 className="font-semibold text-gray-300 text-xl">My Prtfolio</h5>
+          <h5 className="font-semibold text-gray-300 text-xl">My Portfolio</h5>
           <p className="text-sm md:text-lg text-gray-400">© 2024.</p>
         </div>
       </div>
